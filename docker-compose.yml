@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:latest
+    networks:
+      - userbot-network
+    restart: always
+    environment:
+      DB_NAME: ${DB_NAME}
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./src/database/mongo/mongo-init.js:/docker-entrypoint-initdb.d/init.js
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
+
+networks:
+  userbot-network:
+    driver: bridge

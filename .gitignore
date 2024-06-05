@@ -1,3 +1,4 @@
 .env
 Jespy_userbot.session
 .idea/
+__pycache__/

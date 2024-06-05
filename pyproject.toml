@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "daily-bot"
+version = "0.1.0"
+description = "Personal manager TG as userbot"
+authors = ["Anton Georgievsky <123451311+jespy666@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+ruff = "^0.4.4"
+python-dotenv = "^1.0.1"
+loguru = "^0.7.2"
+pyrogram = "^2.0.106"
+tgcrypto = "^1.2.5"
+motor = "^3.4.0"
+
+[tool.ruff.lint]
+ignore = ["F401"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
